@@ -202,7 +202,7 @@ function Reviews() {
           </span>
           <span className='flex items-center p-1'> 
             <span className='text-[14px] text-justify'>
-             I&apos;d make green a bit lighter or so it doesn't bring the first attention every time, otherwise looking very nice!
+             I&apos;d make green a bit lighter or so it doesn&apos;t bring the first attention every time, otherwise looking very nice!
             </span>
           </span>
         </div>
