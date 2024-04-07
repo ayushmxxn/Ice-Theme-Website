@@ -43,15 +43,15 @@ function Preview() {
     return (
         <div id='PreviewSection' className='mb-40 mt-40 mx-5 '>
             <div  className='flex justify-center '>
-                <div  className='bg-white flex-col items-center bg-opacity-30 border   rounded backdrop-blur-md shadow-md w-[1000px] flex justify-center'>
+                <div  className=' flex-col items-center  rounded  w-[1000px] flex justify-center'>
                     <div  className='flex justify-center items-center relative top-3'>
                         <div  className='flex gap-1 items-center justify-center'>
                             <Image src={currentTab.logo} alt='logo' width={20} height={20}/>
                             <p>{currentTab.name}</p>
                         </div>
                     </div>
-                    <div className='flex justify-center flex-col items-center'>
-                        <Image src={preview} alt='Preview' className='p-5 rounded-md' width={900} height={600} />
+                    <div className='flex justify-center flex-col items-center '>
+                        <Image src={preview} alt='Preview' className='rounded-sm' width={900} height={600} />
                     </div>
                     <div className="flex items-center gap-3 relative bottom-2 p-2">
                         <p className='mr-3 cursor-pointer' onClick={handlePrevious}>

@@ -5,10 +5,10 @@ import { SparklesCore } from "./ui/sparkles";
 function Hero() {
   return (
     <div className=" w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-3xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
+      <h1 className="md:text-3xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20 ">
         Ice Theme
       </h1>
-      <h1 className="mt-3 md:text-2xl text-2xl lg:text-2xl font-medium text-center text-slate-200 relative z-20">
+      <h1 className="mt-3 md:text-2xl text-2xl  lg:text-2xl font-normal  text-center text-slate-200 relative z-20">
         Icy tones create a serene workspace.
       </h1>
       <div className="w-[30rem] h-30 rounded-full relative">

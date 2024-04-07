@@ -5,7 +5,15 @@ import { IconMessage, IconUser } from "@tabler/icons-react";
 import Image from "next/image";
 import logo from '../images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import heart from '../images/heart.png'
+import code from '../images/code.png'
+import testimonial from '../images/testimonial.png'
+import star from '../images/star.png'
+
+
+
+
 
 
 interface NavItem {
@@ -74,7 +82,7 @@ export function Navbar() {
 
   return (
     <div id='MainPage' className="relative  w-full flex justify-between items-center">
-      <div onClick={() => reloadPage()} className="flex items-center p-5 gap-2 mt-3 relative bottom-2">
+      <div onClick={() => reloadPage()} className="flex  items-center p-5 gap-2 mt-3 relative bottom-2">
         <Image src={logo} alt="logo" className="w-10 cursor-pointer"/> 
         <span className="font-medium cursor-pointer">Ice Theme</span>
       </div>
@@ -84,14 +92,24 @@ export function Navbar() {
         {/* GitHub icon */}
         <a href="https://github.com/Ayushmaan0101/Ice-Theme" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} style={{ color: 'white', fontSize: '30px' }} />
+          
         </a>
         {/* Twitter icon */}
         <a href="https://twitter.com/AyushmaansinghX" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} style={{ color: 'white', fontSize: '30px' }} />
+          <FontAwesomeIcon icon={faXTwitter} style={{ color: 'white', fontSize: '30px' }}/>
         </a>
+        {!isSmallScreen &&
+        <div>
+          <a href="https://www.buymeacoffee.com/ayushmaanx" target="_blank" rel="noopener noreferrer">
+            <Image src={heart} alt="support" className="w-8"/>
+          </a> 
+        </div>
+        }
+        
+        
         {isSmallScreen && 
         <div>
-          <button onClick={() => openNavbar()} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" >
+          <button onClick={() => openNavbar()} type="button" className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none   dark:text-gray-400 ${opennav && 'bg-gray-700 focus:ring-gray-600 focus:ring-2'}  `}>
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -99,20 +117,32 @@ export function Navbar() {
          </button>
          {opennav &&
          <div className="absolute right-0 w-full z-50">
-            <ul className="font-medium flex flex-col space-y-4 p-4 mt-4 border  bg-gray-800 border-gray-700">
+            <ul className="font-medium flex flex-col space-y-4 p-4 px-4 mt-4  bg-slate-900 border-gray-700">
               
               <li>
                 
-                <a href="#PreviewSection" className="block py-2 px-3 text-white bg-slate-700 rounded">🎨 Preview</a>
+                <a href="#PreviewSection" className="flex items-center gap-2 py-2 px-3 text-black font-semibold bg-gradient-to-br from-white to-blue-400  rounded">
+                  <Image src={code} alt="support" className="w-5"/>
+                  Preview</a>
                 
               </li>
               <li>
-                <a href="#TestimonialSection" className="block py-2 px-3 rounded bg-slate-700   text-white">
-                  🎴 Testimonials
+                <a href="#TestimonialSection" className="flex items-center gap-2 py-2 px-3 rounded font-semibold bg-gradient-to-br from-white to-blue-400  text-black">
+                  <Image src={testimonial} alt="support" className="w-5"/>
+                   Testimonials
                 </a>
               </li>
               <li>
-                <a href="#ReviewSection" className="block py-2 px-3 rounded bg-slate-700   text-white ">👻 Write a review</a>
+                <a href="#ReviewSection" className="flex items-center gap-2 py-2 px-3 rounded font-semibold bg-gradient-to-br from-white to-blue-400  text-black  ">
+                  <Image src={star} alt="support" className="w-5"/> 
+                  Write a review
+                </a>
+              </li>
+              <li>
+                <a href="https://www.buymeacoffee.com/ayushmaanx" target="_blank" rel="noopener noreferrer" className="flex  font-semibold items-center gap-1 py-2 px-3 rounded bg-gradient-to-br from-white to-blue-400  text-black ">
+                  <Image src={heart} alt="support" className="w-5"/>
+                  Support
+                </a>
               </li>
              
             </ul>

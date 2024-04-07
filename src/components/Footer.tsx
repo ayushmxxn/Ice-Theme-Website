@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import logo from '../images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
@@ -29,7 +29,7 @@ function Footer() {
 
                 {/* Twitter icon */}
                 <a href="https://twitter.com/AyushmaansinghX" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faTwitter} style={{ color: 'white', fontSize: '30px' }} />
+                    <FontAwesomeIcon icon={faXTwitter} style={{ color: 'white', fontSize: '30px' }}/>
                 </a>
                 </div> 
             </ul>
