@@ -18,16 +18,40 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* Sets the text color using a custom RGB variable */
+  background: linear-gradient(to top, #353b4d, #2e5fc3, #000000);
+  /* Sets the background gradient */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Styles for scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+  /* Height of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--foreground-rgb), 0.5);
+  /* Blue color for the scrollbar thumb */
+  border-radius: 6px;
+ 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #1e40af;
+  /* Blue color for the scrollbar thumb on hover */
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to right, rgba(var(--background-start-rgb), 0.8), rgba(var(--background-end-rgb), 0.8));
+}
+
+body::-webkit-scrollbar-track:hover {
+  background: linear-gradient(to right, rgba(var(--background-start-rgb), 0.9), rgba(var(--background-end-rgb), 0.9));
 }
