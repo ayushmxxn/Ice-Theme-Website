@@ -19,16 +19,17 @@ export const metadata: Metadata = {
   og: {
     title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
     description: "Ice Theme for Visual Studio Code.",
-    url: "https://icetheme.in", // Website Url
+    url: "https://www.icetheme.in/", // Website Url
     image: "https://i.imgur.com/qxYF0Cv.jpeg", // Thumbnail
     type: "website",
     site_name: "Ice Theme"
   },
-  canonical: "https://icetheme.in" // Website Url
+  canonical: "https://www.icetheme.in/" // Website Url
 };
 
 
 export default function RootLayout({
+  
   children,
 }: Readonly<{
   children: React.ReactNode;
