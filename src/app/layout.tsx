@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     site: "@AyushmaansinghX",
     title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
     description: "Ice Theme for Visual Studio Code.",
-   
     images: ["https://i.imgur.com/qxYF0Cv.jpeg"] // Thumbnail
   },
   og: {
