@@ -1,15 +1,16 @@
-import Footer from '@/components/Footer'
+import Navbar from "@/components/Navbar";
 import Hero from '@/components/Hero'
-import React from 'react'
+import Theme from '../components/Theme'
 import Reviews from '@/components/Reviews'
 import UserReviewForm from '@/components/UserReviewForm'
-import Theme from '../components/Theme'
+import Footer from '@/components/Footer'
 
 
 function Home() {
 
   return (
     <div className='text-center'>
+      <Navbar/>
       <Hero/>
       <Theme/>
       <div className='flex justify-center'>

@@ -21,7 +21,7 @@ function UserReviewForm() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-44 sm:mt-8  bg-gradient-to-br from-slate-200 to-slate-400 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-4xl"
+        className={`mt-44 sm:mt-8  bg-gradient-to-br from-slate-200 to-slate-400 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-4xl`}
       >
         Writing a review only takes a moment.
        <div id="ReviewSection" className="relative top-10">

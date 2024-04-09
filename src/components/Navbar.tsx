@@ -72,8 +72,8 @@ export function Navbar() {
       onClick: () => scrollToSection('TestimonialSection'),
     },
     {
-      name: "Feedback",
-      link: "#ReviewSection",
+      name: "Write a review",
+      link: "https://marketplace.visualstudio.com/items?itemName=AyushmaanSingh.blazetheme&ssr=false#review-details",
       onClick: () => scrollToSection('ReviewSection'),
     },
   ];

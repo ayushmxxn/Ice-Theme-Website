@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { Metadata } from '../utils/types';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,17 +14,17 @@ export const metadata: Metadata = {
     title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
     description: "Ice Theme for Visual Studio Code.",
    
-    images: ["https://example.com/ice-theme-preview.png"] // Thumbnail
+    images: ["https://i.imgur.com/qxYF0Cv.jpeg"] // Thumbnail
   },
   og: {
     title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
     description: "Ice Theme for Visual Studio Code.",
-    url: "https://example.com", // Website Url
-    image: "https://example.com/ice-theme-preview.png", // Thumbnail
+    url: "https://icetheme.in", // Website Url
+    image: "https://i.imgur.com/qxYF0Cv.jpeg", // Thumbnail
     type: "website",
     site_name: "Ice Theme"
   },
-  canonical: "https://example.com" // Website Url
+  canonical: "https://icetheme.in" // Website Url
 };
 
 
@@ -37,7 +36,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
         {children}
       </body>
     </html>

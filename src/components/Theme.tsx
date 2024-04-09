@@ -4,7 +4,8 @@ import Blaze from '../images/Blaze Theme Preview.png';
 import { useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-
+import { Poppins } from 'next/font/google';
+const poppin = Poppins({subsets: ['latin'] , weight: '600'})
 function Theme() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -15,7 +16,7 @@ function Theme() {
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   return (
-    <div id='ThemeSection' className="bg-gradient-to-t from-indigo-400 to-blue-500 py-20 md:bg-gradient-to-t md:from-indigo-500 md:to-blue-500">
+    <div id='ThemeSection' className={`bg-gradient-to-t from-indigo-400 to-blue-500 py-20 md:bg-gradient-to-t md:from-indigo-500 md:to-blue-500 ${poppin.className}`}>
       <motion.h1 ref={ref} style={{ scale: scaleProgress, opacity: scrollYProgress }} className='text-[24px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-12' transition={{ duration: 0.5 }}>
         Code like it&apos;s below zero with Frozen Rainbow
       </motion.h1>
