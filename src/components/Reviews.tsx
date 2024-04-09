@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import Image from 'next/image';
 import RL1 from '../images/RL1.png';
 import RL2 from '../images/RL2.png';
 import RL3 from '../images/RL3.jpg';
@@ -8,12 +9,21 @@ import RL6 from '../images/RL6.png';
 import RL7 from '../images/RL7.png';
 import RL8 from '../images/RL8.png';
 import RL9 from '../images/RL9.png';
+import { useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import {motion} from 'framer-motion'
 
-
-
-import Image from 'next/image';
 
 function Reviews() {
+
+  const ref = useRef<HTMLDivElement>(null)
+  const {scrollYProgress} = useScroll({
+    target: ref,
+    offset: ["0 1", "3.33 1"]
+  })
+
+  const scaleProgress =  useTransform(scrollYProgress, [0,1], [0.5,1])
+
   function handleReview(event: React.MouseEvent<HTMLDivElement>) {
     const reviewNumber = event.currentTarget.getAttribute('data-review-number');
 
@@ -53,17 +63,14 @@ function Reviews() {
   }
 
   return (
-    <div className='bg-black w-full'>
-      <div id='TestimonialSection' className='text-4xl mb-16  pt-16 px-5 font-bold'>
+    
+    <div  className='bg-slate-900 w-full'>
+      <motion.div ref={ref} style={{scale: scaleProgress, opacity: scrollYProgress }}  id='TestimonialSection'  className={`text-4xl mb-16 pt-16 px-6 font-bold`}>
+        
         Read what people are saying
-      </div>
-
-      <div className='p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6'>
-
-
-
+      </motion.div>
+      <div className={`p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 `}>
         {/* Review 1 */}
-
         <div onClick={handleReview} data-review-number="1" className='rounded-md bg-slate-800  h-full p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL1} alt='review' className='w-8' />
@@ -78,10 +85,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
         {/* Review 2 */}
-
         <div onClick={handleReview} data-review-number="2" className='rounded-md bg-slate-800 h-full p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL2} alt='review' className='w-8' />
@@ -97,11 +101,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
-
        {/* Review 3 */}
-
         <div onClick={handleReview}  data-review-number="3" className='rounded-md bg-slate-800  h-full p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL3} alt='review' className='w-8 rounded-full' />
@@ -115,10 +115,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
         {/* Review 4*/}
-
         <div onClick={handleReview} data-review-number="4" className='rounded-md bg-slate-800  h-full p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL4} alt='review' className='w-8' />
@@ -131,10 +128,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
         {/* Review 5 */}
-
         <div onClick={handleReview} data-review-number="5" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL5} alt='review' className='w-8'/>
@@ -146,10 +140,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
         {/* Review 6*/}
-
         <div onClick={handleReview} data-review-number="6" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL6} alt='review' className='w-8' />
@@ -161,10 +152,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
         {/* Review 7*/}
-
         <div onClick={handleReview} data-review-number="7" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL7} alt='review' className='w-8' />
@@ -176,10 +164,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
         {/* Review 8 */}
-
         <div onClick={handleReview} data-review-number="8" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer'>
           <span className='flex items-center'>
             <Image src={RL8} alt='review' className='w-8' />
@@ -191,9 +176,6 @@ function Reviews() {
             </span>
           </span>
         </div>
-
-
-
         {/* Review 9 */}
         <div onClick={handleReview} data-review-number="9" className='rounded-md bg-slate-800 h-30 p-2 cursor-pointer'>
           <span className='flex items-center'>
@@ -206,9 +188,7 @@ function Reviews() {
             </span>
           </span>
         </div>
-
       </div>
-      
     </div>
   );
 }

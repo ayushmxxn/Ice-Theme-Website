@@ -17,11 +17,16 @@
 }
 
 body {
+  /* Set text color using a custom RGB variable */
   color: rgb(var(--foreground-rgb));
-  /* Sets the text color using a custom RGB variable */
-  background: linear-gradient(to top, #353b4d, #2e5fc3, #000000);
-  /* Sets the background gradient */
+  /* Set background gradient */
+  background: linear-gradient(to top, #353b4d, #005eff, #000000);
 }
+
+
+
+
+/* Add a subtle box shadow to elements */
 
 @layer utilities {
   .text-balance {
@@ -55,3 +60,4 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-track:hover {
   background: linear-gradient(to right, rgba(var(--background-start-rgb), 0.9), rgba(var(--background-end-rgb), 0.9));
 }
+
