@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import Ice from '../images/Blaze Theme Preview.png';
+import Blaze from '../images/Blaze Theme Preview.png';
 import { useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -22,7 +22,7 @@ function Theme() {
       </motion.h1>
       <div className='flex justify-center'>
         <div className='w-full max-w-4xl'>
-          <Image src={Ice} alt='Ice Theme Preview' className='p-3 rounded-2xl' />
+          <Image src={Blaze} alt='Ice Theme Preview' className='p-3 rounded-2xl' />
         </div>
       </div>
     </div>
