@@ -1,3 +1,5 @@
+import React from 'react';
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from '../utils/types';
@@ -26,17 +28,33 @@ export const metadata: Metadata = {
   canonical: "https://www.icetheme.in/" // Website Url
 };
 
-
-export default function RootLayout({
-  
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        {/* HTML Meta Tags */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+
+        {/* Facebook Meta Tags */}
+        <meta property="og:url" content={metadata.og.url} />
+        <meta property="og:type" content={metadata.og.type} />
+        <meta property="og:title" content={metadata.og.title} />
+        <meta property="og:description" content={metadata.og.description} />
+        <meta property="og:image" content={metadata.og.image} />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta property="twitter:domain" content="icetheme.in" />
+        <meta property="twitter:url" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+      </head>
+
       <body className={inter.className}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
