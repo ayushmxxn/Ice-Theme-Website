@@ -1,5 +1,6 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react";
+import Script from 'next/script';
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from '../utils/types';
@@ -53,6 +54,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
 
       <body className={inter.className}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-KGPVK8W0Q4"
+          strategy="beforeInteractive"
+        />
+        <Script id="ga-script">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KGPVK8W0Q4');
+          `}
+        </Script>
         {children}
         <Analytics />
       </body>
