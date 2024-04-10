@@ -1,4 +1,3 @@
-import React from 'react';
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,6 +6,7 @@ import { Metadata } from '../utils/types';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  
   title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
   description: "Ice Theme for Visual Studio Code.",
   keywords: "ice theme, Ice Theme, icetheme, vs code theme, coding themes, code editor themes, modern theme, productivity theme, dark theme, blue theme",
@@ -32,6 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
+        
         {/* HTML Meta Tags */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
