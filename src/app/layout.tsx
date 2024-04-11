@@ -7,18 +7,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   
-  title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
+  title: "Ice Theme - Icy tones create a serene workspace.",
   description: "Ice Theme for Visual Studio Code.",
   keywords: "ice theme, Ice Theme, icetheme, vs code theme, coding themes, code editor themes, modern theme, productivity theme, dark theme, blue theme",
   twitter: {
     card: "summary_large_image",
     site: "@AyushmaansinghX",
-    title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
+    title: "Ice Theme - Icy tones create a serene workspace.",
     description: "Ice Theme for Visual Studio Code.",
     images: ["https://i.imgur.com/qxYF0Cv.jpeg"] // Thumbnail
   },
   og: {
-    title: "Ice Theme - Make Coding Cooler Than the Other Side of the Pillow.",
+    title: "Ice Theme - Icy tones create a serene workspace.",
     description: "Ice Theme for Visual Studio Code.",
     url: "https://www.icetheme.in/", // Website Url
     image: "https://i.imgur.com/qxYF0Cv.jpeg", // Thumbnail

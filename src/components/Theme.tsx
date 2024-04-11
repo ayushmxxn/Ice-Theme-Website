@@ -17,8 +17,9 @@ function Theme() {
 
   return (
     <div id='ThemeSection' className={`bg-gradient-to-t from-indigo-400 to-blue-500 py-20 md:bg-gradient-to-t md:from-indigo-500 md:to-blue-500 ${poppin.className}`}>
-      <motion.h1 ref={ref} style={{ scale: scaleProgress, opacity: scrollYProgress }} className='text-[24px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-12' transition={{ duration: 0.5 }}>
-        Code like it&apos;s below zero with Frozen Rainbow
+      <motion.h1 ref={ref} style={{ scale: scaleProgress, opacity: scrollYProgress }} className='text-[23px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-12' transition={{ duration: 0.5 }}>
+        Make Coding Cooler Than the
+        Other Side of the Pillow.
       </motion.h1>
       <div className='flex justify-center'>
         <div className='w-full max-w-4xl'>

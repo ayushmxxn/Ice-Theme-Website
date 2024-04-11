@@ -66,7 +66,7 @@ function Reviews() {
   return (
     
     <div  className='bg-slate-900 w-full'>
-      <motion.div ref={ref} style={{scale: scaleProgress, opacity: scrollYProgress }}  id='TestimonialSection'  className={`text-4xl mb-16 pt-16 px-6 font-bold ${poppin.className}`}>
+      <motion.div ref={ref} style={{scale: scaleProgress, opacity: scrollYProgress }}  id='TestimonialSection'  className={`text-3xl sm:text-4xl mb-16 pt-16 px-8 font-bold ${poppin.className}`}>
         
         Read what people are saying
       </motion.div>
