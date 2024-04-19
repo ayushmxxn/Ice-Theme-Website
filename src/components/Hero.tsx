@@ -13,7 +13,7 @@ function Hero() {
     window.open(id)
     
   };
-
+  
   return (
     <div className={`relative  w-full h-[650px]  flex flex-col items-center justify-center overflow-hidden rounded-md`}>
       <Image src={logo} alt='logo' className='w-32 mb-5 relative bottom-24 sm:bottom-20  z-10'/>

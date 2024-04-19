@@ -11,6 +11,8 @@ import testimonial from '../images/testimonial.png'
 import star from '../images/star.png'
 import { Nunito_Sans } from "next/font/google";
 
+
+
 interface NavItem {
   name: string;
   link: string;
@@ -95,6 +97,7 @@ export function Navbar() {
         <a href="https://twitter.com/AyushmaansinghX" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faXTwitter} style={{ color: 'white', fontSize: '30px' }}/>
         </a>
+
         {!isSmallScreen &&
         <div>
           <a href="https://www.buymeacoffee.com/ayushmaanx" target="_blank" rel="noopener noreferrer">
@@ -102,6 +105,8 @@ export function Navbar() {
           </a> 
         </div>
         }
+      
+        
         
         {isSmallScreen && 
         <div>
@@ -117,6 +122,7 @@ export function Navbar() {
               </svg>
             }
          </button>
+         
          {openNav &&
            <div className={`absolute right-0 w-full  z-50 transition-all ease-linear duration-500`} style={{ maxHeight: menuHeight, overflow: 'hidden' }}>
               <ul id="menuList" className="font-medium flex flex-col space-y-5 p-4 px-4 mt-4 h-64 bg-slate-900 bg-opacity-10 backdrop-blur-xl border-gray-700">

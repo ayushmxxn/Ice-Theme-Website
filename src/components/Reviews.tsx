@@ -17,6 +17,7 @@ const poppin = Poppins({subsets: ['latin'] , weight: '600'})
 
 function Reviews() {
 
+  
   const ref = useRef<HTMLDivElement>(null)
   const {scrollYProgress} = useScroll({
     target: ref,

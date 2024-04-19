@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     site: "@AyushmaansinghX",
     title: "Ice Theme - Icy tones create a serene workspace.",
     description: "Ice Theme for Visual Studio Code.",
-    images: ["https://i.imgur.com/qxYF0Cv.jpeg"] // Thumbnail
+    images: ["https://i.imgur.com/IGbCyTz.jpeg"] // Thumbnail
   },
   og: {
     title: "Ice Theme - Icy tones create a serene workspace.",
     description: "Ice Theme for Visual Studio Code.",
     url: "https://www.icetheme.in/", // Website Url
-    image: "https://i.imgur.com/qxYF0Cv.jpeg", // Thumbnail
+    image: "https://i.imgur.com/IGbCyTz.jpeg", // Thumbnail
     type: "website",
     site_name: "Ice Theme"
   },
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.images[0]} />
       </head>
-
+      
       <body className={inter.className}>
         {children}
         <Analytics />
@@ -60,3 +60,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
+
