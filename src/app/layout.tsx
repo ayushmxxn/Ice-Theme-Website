@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords: "ice theme, Ice Theme, icetheme, vs code theme, coding themes, code editor themes, modern theme, productivity theme, dark theme, blue theme",
   twitter: {
     card: "summary_large_image",
-    site: "@AyushmaansinghX",
+    site: "@ayushmxxn",
     title: "Ice Theme - Icy tones create a serene workspace.",
     description: "Ice Theme for Visual Studio Code.",
     images: ["https://i.imgur.com/IGbCyTz.jpeg"] // Thumbnail

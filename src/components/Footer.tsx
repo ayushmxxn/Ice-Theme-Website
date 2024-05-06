@@ -27,7 +27,7 @@ function Footer() {
                 <a href="https://github.com/Ayushmaan0101/Ice-Theme" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} style={{ color: 'white', fontSize: '30px' }} />
                 </a>
-                <a href="https://twitter.com/AyushmaansinghX" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/ayushmxxn" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faXTwitter} style={{ color: 'white', fontSize: '30px' }}/>
                 </a>
                 </div> 
