@@ -24,7 +24,7 @@ function Footer() {
                     <a href="#TestimonialSection" className="hover:underline me-4 md:me-6">Testimonials</a>
                 </li>
                 <div className='space-x-6'>
-                <a href="https://github.com/Ayushmaan0101/Ice-Theme" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/ayushmxxn/Ice-Theme" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} style={{ color: 'white', fontSize: '30px' }} />
                 </a>
                 <a href="https://twitter.com/ayushmxxn" target="_blank" rel="noopener noreferrer">

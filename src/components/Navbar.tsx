@@ -90,7 +90,7 @@ export function Navbar() {
       { !isSmallScreen && <FloatingNav navItems={navItems} /> }
       <div className="flex justify-end items-center gap-5 mr-5">
 
-        <a href="https://github.com/Ayushmaan0101/Ice-Theme" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/ayushmxxn/Ice-Theme" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} style={{ color: 'white', fontSize: '30px' }} />
         </a>
 
@@ -100,7 +100,7 @@ export function Navbar() {
 
         {!isSmallScreen &&
         <div>
-          <a href="https://www.buymeacoffee.com/ayushmaanx" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.buymeacoffee.com/ayushmxxn" target="_blank" rel="noopener noreferrer">
             <Image src={heart} alt="support" className="w-8"/>
           </a> 
         </div>
