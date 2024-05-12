@@ -26,7 +26,7 @@ const Theme = () => {
   }, []); 
  
   return (
-    <div id='ThemeSection' className={`py-12 sm:py-20 bg-gradient-to-b from-sky-500 via-purple-600 to-violet-600`}>
+    <div id='ThemeSection' className={`py-12 sm:py-20 bg-gradient-to-b from-sky-500 via-violet-600 to-violet-600`}>
       <motion.h1 ref={ref} style={{ scale: scaleProgress, opacity: scrollYProgress }} className='text-[23px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-8 ' transition={{ duration: 0.5 }}>
         Make Coding Cooler Than the
         Other Side of the Pillow.
