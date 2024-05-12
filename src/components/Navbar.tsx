@@ -135,7 +135,7 @@ export function Navbar() {
                   </li>
                 ))}
                 <li>
-                  <a href="https://www.buymeacoffee.com/ayushmaanx" target="_blank" rel="noopener noreferrer" className="flex font-semibold items-center gap-2 py-2 px-3 pb-10 rounded text-white ">
+                  <a href="https://www.buymeacoffee.com/ayushmxxn" target="_blank" rel="noopener noreferrer" className="flex font-semibold items-center gap-2 py-2 px-3 pb-10 rounded text-white ">
                     <Image src={heart} alt="support" className="w-5"/>
                     Support
                   </a>
