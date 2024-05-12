@@ -32,7 +32,7 @@ const Theme = () => {
         Other Side of the Pillow.
       </motion.h1>
       <div className='flex justify-center'>
-        <div className='w-full max-w-4xl bg-slate-900 border'>
+        <div className='w-full max-w-4xl  '>
           <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-3 rounded-2xl' />
         </div>
       </div>
