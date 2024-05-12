@@ -24,15 +24,15 @@ const Theme = () => {
 
     return () => clearInterval(interval);
   }, []); 
-
+ 
   return (
-    <div id='ThemeSection' className={`bg-gradient-to-t from-indigo-400 to-blue-500 py-20 md:bg-gradient-to-t md:from-indigo-500 md:to-blue-500`}>
+    <div id='ThemeSection' className={`py-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-indigo-800 to-violet-600`}>
       <motion.h1 ref={ref} style={{ scale: scaleProgress, opacity: scrollYProgress }} className='text-[23px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-12' transition={{ duration: 0.5 }}>
         Make Coding Cooler Than the
         Other Side of the Pillow.
       </motion.h1>
       <div className='flex justify-center'>
-        <div className='w-full max-w-4xl'>
+        <div className='w-full max-w-4xl bg-slate-900 border'>
           <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-3 rounded-2xl' />
         </div>
       </div>
