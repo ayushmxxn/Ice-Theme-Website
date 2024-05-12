@@ -73,7 +73,7 @@ function Reviews() {
       </motion.div>
       <div className={`p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 `}>
         {/* Review 1 */}
-        <div onClick={handleReview} data-review-number="1" className={`rounded-md bg-slate-800  h-full p-2 cursor-pointer shadow-md shadow-black`}>
+        <div onClick={handleReview} data-review-number="1" className={`rounded-md bg-slate-800  border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black`}>
           <span className='flex items-center'>
             <Image src={RL1} alt='review' className='w-8' />
             <span className='text-sm ml-2'>Psychological-Tax801</span>
@@ -88,7 +88,7 @@ function Reviews() {
           </span>
         </div>
         {/* Review 2 */}
-        <div onClick={handleReview} data-review-number="2" className='rounded-md bg-slate-800 h-full p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="2" className='rounded-md bg-slate-800  border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL2} alt='review' className='w-8' />
             <span className='text-sm ml-2'>black_anarchy</span>
@@ -104,7 +104,7 @@ function Reviews() {
           </span>
         </div>
        {/* Review 3 */}
-        <div onClick={handleReview}  data-review-number="3" className='rounded-md bg-slate-800  h-full p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview}  data-review-number="3" className='rounded-md bg-slate-800  border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL3} alt='review' className='w-8 rounded-full' />
             <span className='text-sm ml-2'>pasanflo</span>
@@ -118,7 +118,7 @@ function Reviews() {
           </span>
         </div>
         {/* Review 4*/}
-        <div onClick={handleReview} data-review-number="4" className='rounded-md bg-slate-800  h-full p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="4" className='rounded-md bg-slate-800  border border-slate-600   h-full p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL4} alt='review' className='w-8' />
             <span className='text-sm ml-2'>Dt-dave</span>
@@ -131,7 +131,7 @@ function Reviews() {
           </span>
         </div>
         {/* Review 5 */}
-        <div onClick={handleReview} data-review-number="5" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="5" className='rounded-md bg-slate-800  border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL5} alt='review' className='w-8'/>
             <span className='text-sm ml-2'>Suspect4pe</span>
@@ -143,19 +143,20 @@ function Reviews() {
           </span>
         </div>
         {/* Review 6*/}
-        <div onClick={handleReview} data-review-number="6" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="6" className='rounded-md bg-slate-800  border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL6} alt='review' className='w-8' />
             <span className='text-sm ml-2'>wolf_codes</span>
           </span>
           <span className='flex items-center p-1'> 
             <span className='text-[14px] text-justify'>
-              Thank you, I love tokyo night but only thing annoying was git diffs and terminal autocompletion were little pale to me. But this theme looks like the one i need. 🫡
+              Thank you, I love tokyo night but only thing annoying
+              was git diffs and terminal autocompletion were little pale to me. But this theme looks like the one i need. 🫡
             </span>
           </span>
         </div>
         {/* Review 7*/}
-        <div onClick={handleReview} data-review-number="7" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="7" className='rounded-md bg-slate-800  border border-slate-600   h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL7} alt='review' className='w-8' />
             <span className='text-sm ml-2'>fewytv</span>
@@ -167,7 +168,7 @@ function Reviews() {
           </span>
         </div>
         {/* Review 8 */}
-        <div onClick={handleReview} data-review-number="8" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="8" className='rounded-md bg-slate-800  border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL8} alt='review' className='w-8' />
             <span className='text-sm ml-2'>CarbonGrated</span>
@@ -179,7 +180,7 @@ function Reviews() {
           </span>
         </div>
         {/* Review 9 */}
-        <div onClick={handleReview} data-review-number="9" className='rounded-md bg-slate-800 h-30 p-2 cursor-pointer shadow-md shadow-black'>
+        <div onClick={handleReview} data-review-number="9" className='rounded-md bg-slate-800  border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL9} alt='review' className='w-8' />
             <span className='text-sm ml-2'>misterjyt</span>
