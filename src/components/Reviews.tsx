@@ -47,7 +47,7 @@ function Reviews() {
           window.open('https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kx4qx95/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
           break;
         case '6':
-          window.open('https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kx8jfz4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
+          window.open('https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/l3kodsg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
           break;
         case '7':
           window.open('https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kxa0kdl/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
@@ -56,7 +56,7 @@ function Reviews() {
           window.open('https://www.reddit.com/r/developersIndia/comments/1bv7xkg/comment/kxz3bbx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
           break;
         case '9':
-          window.open('https://www.reddit.com/r/coding/comments/1bt0tkl/comment/kxj9vcd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
+          window.open('https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kx8jfz4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button');
           break;
         default:
           console.log("Invalid review number");
@@ -146,11 +146,11 @@ function Reviews() {
         <div onClick={handleReview} data-review-number="6" className='rounded-md bg-slate-800  h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL6} alt='review' className='w-8' />
-            <span className='text-sm ml-2'>misterjyt</span>
+            <span className='text-sm ml-2'>wolf_codes</span>
           </span>
           <span className='flex items-center p-1'> 
             <span className='text-[14px] text-justify'>
-              ilike the first one, purple is really good to my eye
+              Thank you, I love tokyo night but only thing annoying was git diffs and terminal autocompletion were little pale to me. But this theme looks like the one i need. 🫡
             </span>
           </span>
         </div>
@@ -182,11 +182,11 @@ function Reviews() {
         <div onClick={handleReview} data-review-number="9" className='rounded-md bg-slate-800 h-30 p-2 cursor-pointer shadow-md shadow-black'>
           <span className='flex items-center'>
             <Image src={RL9} alt='review' className='w-8' />
-            <span className='text-sm ml-2'>TheMunakas</span>
+            <span className='text-sm ml-2'>misterjyt</span>
           </span>
           <span className='flex items-center p-1'> 
             <span className='text-[14px] text-justify'>
-             I&apos;d make green a bit lighter or so it doesn&apos;t bring the first attention every time, otherwise looking very nice!
+             ilike the first one, purple is really good to my eye
             </span>
           </span>
         </div>
