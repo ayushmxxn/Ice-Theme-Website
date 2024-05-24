@@ -32,11 +32,10 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-          "relative flex h-[612px] flex-col items-center justify-center bg-gradient-to-b from-indigo-500 via-purple-400 to-indigo-500 overflow-hidden w-full z-0",
+          "relative flex h-[612px] flex-col items-center justify-center bg-gradient-to-t from-indigo-400 via-blue-500 to-indigo-400 overflow-hidden w-full z-0",
           className // Include any additional className provided
         )}
-        style={{ // Add inline style for background image
-          background: 'linear-gradient(220.55deg, #00E0EE 0%, #AD00FE 100%);',
+        style={{ 
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
         }}

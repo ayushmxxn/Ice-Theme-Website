@@ -84,7 +84,7 @@ export function Navbar() {
     <div id='MainPage' className="relative w-full flex justify-between items-center">
       <div onClick={() => reloadPage()} className="flex items-center p-5 gap-2 mt-3 relative bottom-2">
         <Image src={logo} alt="logo" className="w-10 cursor-pointer"/> 
-        <span className={`font-medium cursor-pointer ${Nunito.className}`}>Ice Theme</span>
+        <span className={`font-medium cursor-pointer text-white ${Nunito.className}`}>Ice Theme</span>
       </div>
 
       { !isSmallScreen && <FloatingNav navItems={navItems} /> }
