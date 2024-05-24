@@ -34,7 +34,7 @@ function UserReviewForm() {
         
        <button 
   onClick={() => redirectUser()} 
-  className="text-white font-medium text-xl bg-white/10 border px-4 py-1 rounded-full shadow-xl backdrop-filter backdrop-blur-md backdrop-opacity-50 hover:backdrop-opacity-100 transition duration-300 ease-in-out"
+  className="text-white font-medium text-xl bg-white/10 hover:bg-white/20 border px-4 py-1 rounded-full shadow-xl backdrop-filter backdrop-blur-md backdrop-opacity-50 hover:backdrop-opacity-100 transition duration-300 ease-in-out"
 >
   Write a review
 </button>
