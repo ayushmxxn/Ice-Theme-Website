@@ -18,9 +18,12 @@
  
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to top, #353b4d, #2f3c6d, #000000);
+  height: 100vh;
+  margin: 0;
+  background-image: url('https://i.imgur.com/mGSAvlp.png');
+  background-size:cover;
+  background-repeat:no-repeat;
 }
-
 
 
 
@@ -54,3 +57,4 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-track:hover {
   background: linear-gradient(to right, rgba(var(--background-start-rgb), 0.9), rgba(var(--background-end-rgb), 0.9));
 }
+

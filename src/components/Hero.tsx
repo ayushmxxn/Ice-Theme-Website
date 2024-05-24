@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import logo from '../images/logo.png'
+import Gradient from '../images/Gradient.png'
 import Image from 'next/image'
 import { SparklesCore } from "./ui/sparkles";
 import { Poppins } from "next/font/google";
@@ -16,7 +17,7 @@ function Hero() {
   
   return (
     
-    <div className={`relative  w-full h-[650px]  flex flex-col items-center justify-center overflow-hidden rounded-md`}>
+    <div className={`relative w-full h-[545px] pt-20  flex flex-col items-center justify-center overflow-hidden rounded-md`}>
       <Image src={logo} alt='logo' className='w-32 mb-5 relative bottom-24 sm:bottom-20  z-10'/>
       <h1 className="sm:text-7xl text-5xl md:text-8xl  font-bold text-center text-indigo-100 relative bottom-24 sm:bottom-20 z-20 ">
         Ice Theme

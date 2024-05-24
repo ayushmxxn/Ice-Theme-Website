@@ -110,14 +110,14 @@ export function Navbar() {
         
         {isSmallScreen && 
         <div>
-          <button onClick={() => toggleNavbar()} type="button" className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none dark:text-gray-400 ${openNav && 'bg-gray-700 focus:ring-gray-600 focus:ring-2'}  `}>
+          <button onClick={() => toggleNavbar()} type="button" className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none dark:text-gray-400 ${openNav && ' border bg-white/20 backdrop-blur-md  border-white/[0.1]'}  `}>
             <span className="sr-only">Open main menu</span>
             {!openNav ?
-              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <svg className="w-5 h-5 text-white " aria-hidden="true"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
               :
-              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12"/>
               </svg>
             }
