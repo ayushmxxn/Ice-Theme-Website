@@ -8,7 +8,7 @@ import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import heart from '../images/heart.png'
 import code from '../images/code.png'
 import testimonial from '../images/testimonial.png'
-import star from '../images/star.png'
+import star from '../images/star.webp'
 import { Nunito_Sans } from "next/font/google";
 
 

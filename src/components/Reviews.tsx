@@ -9,6 +9,8 @@ import RL6 from '../images/RL6.png';
 import RL7 from '../images/RL7.png';
 import RL8 from '../images/RL8.png';
 import RL9 from '../images/RL9.png';
+import stars from '../images/stars.png'
+
 import { useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import {motion} from 'framer-motion'
@@ -66,11 +68,18 @@ function Reviews() {
 
   return (
     
-    <div  className='bg-slate-900 w-full'>
-      <motion.div ref={ref} style={{scale: scaleProgress, opacity: scrollYProgress }}  id='TestimonialSection'  className={`text-3xl sm:text-4xl mb-16 pt-16 px-8 font-bold ${poppin.className}`}>
+    <div  className='bg-black w-full'>
+      <motion.div ref={ref} style={{scale: scaleProgress, opacity: scrollYProgress }}  id='TestimonialSection'  className={`text-3xl sm:text-4xl  pt-16 px-8 font-bold ${poppin.className}`}>
         
         Read what people are saying
       </motion.div>
+      <div className='flex justify-center items-center mt-10 mb-10'>
+        <Image src={stars} alt='rating' width={50} height={50}></Image>
+        <Image src={stars} alt='rating' width={50} height={50}></Image>
+        <Image src={stars} alt='rating' width={50} height={50}></Image>
+        <Image src={stars} alt='rating' width={50} height={50}></Image>
+        <Image src={stars} alt='rating' width={50} height={50}></Image>
+      </div>
       <div className={`p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 `}>
         {/* Review 1 */}
         <div onClick={handleReview} data-review-number="1" className={`rounded-md bg-slate-800  border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black`}>
