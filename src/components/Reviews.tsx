@@ -56,7 +56,7 @@ function Reviews() {
       >
         Read what people are saying
       </div>
-      <div className='flex justify-center items-center mt-10 mb-10'>
+      <div id='Rating Stars' className='flex justify-center items-center mt-10 mb-10'>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
