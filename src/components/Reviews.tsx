@@ -47,7 +47,7 @@ function Reviews() {
   }
 
   return (
-    <div className='bg-black w-full text-white'>
+    <div id='TestimonialSection' className='bg-black w-full text-white'>
       <div
         ref={sectionRef}
         className={`text-3xl sm:text-4xl pt-16 px-10 font-bold ${
