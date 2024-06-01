@@ -1,6 +1,6 @@
 'use client'
-import { useRef, useState, useEffect } from 'react';
-import { motion, useAnimation, useTransform, useScroll, AnimatePresence } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import { useAnimation, useTransform, useScroll, } from 'framer-motion';
 import Image from 'next/image';
 import RL1 from '../images/RL1.png';
 import RL2 from '../images/RL2.png';
@@ -13,6 +13,18 @@ import RL8 from '../images/RL8.png';
 import RL9 from '../images/RL9.png';
 import stars from '../images/stars.png';
 import { useInView } from 'react-intersection-observer';
+
+const redditUrls = [
+  'https://www.reddit.com/r/csMajors/comments/1bv7f2o/comment/kxzghr2/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button', 
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kxjcojk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kx599k0/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kxirken/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kx4qx95/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/l3kodsg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kxa0kdl/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/developersIndia/comments/1bv7xkg/comment/kxz3bbx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  'https://www.reddit.com/r/vscode/comments/1bqr1oy/comment/kx8jfz4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+];
 
 function Reviews() {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,8 +40,6 @@ function Reviews() {
     threshold: 0.5,
   });
 
-  const [selectedReview, setSelectedReview] = useState<string | null>(null);
-
   const controls = useAnimation();
 
   useEffect(() => {
@@ -42,7 +52,7 @@ function Reviews() {
     const reviewNumber = event.currentTarget.getAttribute('data-review-number');
 
     if (reviewNumber) {
-      setSelectedReview(reviewNumber);
+      window.open(redditUrls[parseInt(reviewNumber) - 1], '_blank');
     }
   }
 
@@ -65,25 +75,13 @@ function Reviews() {
       </div>
       <div
         ref={ref}
-        className={`p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6`}
+        className={`p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`}
       >
-        <AnimatePresence>
-          {selectedReview && (
-            <motion.div
-              key='review-details'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className='rounded-md bg-slate-800 border border-slate-600 h-full p-2 cursor-pointer shadow-md shadow-black'
-            >
-            </motion.div>
-          )}
-        </AnimatePresence>
         {/* Review 1 */}
         <div
           onClick={handleReview}
           data-review-number='1'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-full p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL1} alt='review' className='w-8' />
@@ -101,7 +99,7 @@ function Reviews() {
         <div
           onClick={handleReview}
           data-review-number='2'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-full p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL2} alt='review' className='w-8' />
@@ -122,7 +120,7 @@ function Reviews() {
         <div
           onClick={handleReview}
           data-review-number='3'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-full p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL3} alt='review' className='w-8 rounded-full' />
@@ -140,7 +138,7 @@ function Reviews() {
         <div
           onClick={handleReview}
           data-review-number='4'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-full p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-full p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL4} alt='review' className='w-8' />
@@ -157,8 +155,7 @@ function Reviews() {
         <div
           onClick={handleReview}
           data-review-number='5'
-          className={`
-rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-30 p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL5} alt='review' className='w-8'/>
@@ -174,7 +171,7 @@ rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cu
         <div
           onClick={handleReview}
           data-review-number='6'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-30 p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL6} alt='review' className='w-8' />
@@ -191,7 +188,7 @@ rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cu
         <div
           onClick={handleReview}
           data-review-number='7'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-30 p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL7} alt='review' className='w-8' />
@@ -207,7 +204,7 @@ rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cu
         <div
           onClick={handleReview}
           data-review-number='8'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-30 p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL8} alt='review' className='w-8' />
@@ -223,7 +220,7 @@ rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cu
         <div
           onClick={handleReview}
           data-review-number='9'
-          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cursor-pointer shadow-md shadow-black`}
+          className={`rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600 h-30 p-2 cursor-pointer shadow-md shadow-black`}
         >
           <span className='flex items-center'>
             <Image src={RL9} alt='review' className='w-8' />
@@ -231,7 +228,7 @@ rounded-md bg-slate-800 hover:bg-opacity-90 border border-slate-600  h-30 p-2 cu
           </span>
           <span className='flex items-center p-1'>
             <span className='text-[14px] text-justify'>
-             ilike the first one, purple is really good to my eye
+              I like the first one, purple is really good to my eye
             </span>
           </span>
         </div>
