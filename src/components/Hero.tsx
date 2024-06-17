@@ -34,11 +34,15 @@ function Hero() {
           particleColor="#ffffff" 
         />
       </div>
-      <div id='Get Theme Button' onClick={()=> openExtensionPage()}>
-        <button className={`cursor-pointer relative bottom-8 sm:bottom-8 text-black inline-flex items-center justify-center whitespace-nowrap font-semibold px-4 py-3 leading-none border-none rounded-md shadow-md bg-gradient-to-br from-white to-blue-400 ${poppin.className}`}>
-          Add to VS Code
-        </button>
-      </div>
+     <div id='Get Theme Button' onClick={() => openExtensionPage()}>
+      <button className={`cursor-pointer relative bottom-8 sm:bottom-8 text-black inline-flex items-center justify-center whitespace-nowrap font-semibold px-4 py-3 leading-none border-none rounded-md shadow-md bg-gradient-to-br from-white to-blue-400 overflow-hidden ${poppin.className}`}>
+        Add to VS Code
+        <div className="melting-snow"></div>
+        <span className="drop drop1"></span>
+        <span className="drop drop2"></span>
+        <span className="drop drop3"></span>
+      </button>
+    </div>
     </div>
   );
 }
