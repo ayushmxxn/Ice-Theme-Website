@@ -62,9 +62,15 @@ const Theme = () => {
         Make Coding Cooler Than the Other Side of the Pillow.
       </motion.div>
       <div className='flex justify-center'>
-        <div className='w-full max-w-4xl'>
+        <motion.div className='w-full max-w-4xl'
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 1}}
+     
+        >
+        
           <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-2 rounded-xl mb-5' />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

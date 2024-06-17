@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useEffect } from 'react';
-import { useAnimation, useTransform, useScroll, } from 'framer-motion';
+import { useAnimation, useTransform, useScroll, motion } from 'framer-motion';
 import Image from 'next/image';
 import RL1 from '../images/RL1.png';
 import RL2 from '../images/RL2.png';
@@ -66,13 +66,17 @@ function Reviews() {
       >
         Read what people are saying
       </div>
-      <div id='Rating Stars' className='flex justify-center items-center mt-10 mb-10'>
+      <motion.div id='Rating Stars' className='flex justify-center items-center mt-10 mb-10'
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 1}}
+      >
         <Image src={stars} alt='rating' width={40} height={40}></Image>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
         <Image src={stars} alt='rating' width={40} height={40}></Image>
-      </div>
+      </motion.div>
       <div
         ref={ref}
         className={`p-5 mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`}
