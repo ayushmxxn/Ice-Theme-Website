@@ -97,7 +97,7 @@ const Theme = () => {
      
         >
         
-          <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-2 border border-slate-500 backdrop-blur-md bg-white/20 rounded-xl mb-5' />
+          <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-2 border border-slate-400 backdrop-blur-md bg-white/20 rounded-xl mb-5' />
         </motion.div>
 
       
