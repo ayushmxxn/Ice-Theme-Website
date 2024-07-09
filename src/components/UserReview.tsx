@@ -3,20 +3,23 @@ import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import logo from '../images/logo.png'
 import {
   useMotionTemplate,
   useMotionValue,
   motion,
   animate,
 } from "framer-motion";
-import Image from "next/image";
-import Navbar from "./Navbar";
 
-const COLORS_TOP = ["#1E67C6"];
+const COLORS_TOP = ["#CE84CF", "#DD335C"];
 
-const Hero = () => {
+const UserReview = () => {
   const color = useMotionValue(COLORS_TOP[0]);
+
+  function redirectUser(){
+        
+        const extensionId = "AyushmaanSingh.blazetheme";
+        window.open(`https://marketplace.visualstudio.com/items?itemName=${extensionId}&ssr=false#review-details`);
+    }
 
   useEffect(() => {
     animate(color, COLORS_TOP, {
@@ -27,15 +30,6 @@ const Hero = () => {
     });
   }, [color]);
 
-  
-  const openExtensionPage = () => {
-
-    const id= 'vscode:extension/AyushmaanSingh.blazetheme'
-    window.open(id)
-    
-  };
-  
-
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
@@ -45,19 +39,15 @@ const Hero = () => {
       style={{
         backgroundImage,
       }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+      className="relative grid max-h-[620px] h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
     >
       <div className="relative z-10 flex flex-col items-center">
-        <Navbar/>
-        <Image src={logo} alt='logo' className='w-32 mb-5 z-10'/>
-       <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-5xl font-semibold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
-          Ice Theme
+       
+        <h1 className="bg-gradient-to-br from-slate-200 to-slate-100 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-6xl md:mx-80">
+          Writing a review only takes a moment.
         </h1>
-        <p className="my-6 max-w-xl text-center text-lg font-medium leading-relaxed  md:text-lg md:leading-relaxed">
-         Ice Theme for Visual Studio Code. Embrace Serenity with Icy Tones
-        </p>
         <motion.button
-        onClick={() => openExtensionPage()}
+        onClick={() => redirectUser()} 
           style={{
             border,
             boxShadow,
@@ -68,9 +58,9 @@ const Hero = () => {
           whileTap={{
             scale: 0.985,
           }}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 mt-5"
         >
-          Add to VS Code
+          Write a review
           <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
         </motion.button>
       </div>
@@ -84,4 +74,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default UserReview;

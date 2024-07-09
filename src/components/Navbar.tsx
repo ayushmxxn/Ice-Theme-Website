@@ -11,20 +11,19 @@ import testimonial from '../images/testimonial.png'
 import star from '../images/star.webp'
 import { Nunito_Sans } from "next/font/google";
 
-
-
 interface NavItem {
   name: string;
   link: string;
   onClick: () => void;
 }
 
-const Nunito = Nunito_Sans({subsets: ['latin'], weight: '700'})
+const Nunito = Nunito_Sans({ subsets: ['latin'], weight: '700' });
 
 export function Navbar() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const [menuHeight, setMenuHeight] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,6 +45,20 @@ export function Navbar() {
       setMenuHeight(0);
     }
   }, [openNav]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      setIsVisible(scrollTop <= viewportHeight * 0.1);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   function toggleNavbar() {
     setOpenNav(!openNav);
@@ -81,7 +94,7 @@ export function Navbar() {
   ];
 
   return (
-    <div id='MainPage' className="relative w-full flex justify-between items-center">
+    <div id='MainPage' className={`w-full flex justify-between items-center z-40 fixed top-0 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div onClick={() => reloadPage()} className="flex items-center p-5 gap-2 mt-3 relative bottom-2">
         <Image src={logo} alt="logo" className="w-10 cursor-pointer"/> 
         <span className={`font-medium cursor-pointer text-white ${Nunito.className}`}>Ice Theme</span>
@@ -106,8 +119,6 @@ export function Navbar() {
         </div>
         }
       
-        
-        
         {isSmallScreen && 
         <div>
           <button onClick={() => toggleNavbar()} type="button" className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none dark:text-gray-400 ${openNav && ' border bg-white/20 backdrop-blur-md  border-white/[0.1]'}  `}>
@@ -124,7 +135,7 @@ export function Navbar() {
          </button>
          
          {openNav &&
-           <div className={`absolute right-0 w-full  z-50 transition-all ease-linear duration-500`} style={{ maxHeight: menuHeight, overflow: 'hidden' }}>
+           <div className={`absolute right-0 w-full bg-transparent backdrop-blur-lg bg-black  z-50 transition-all ease-linear duration-500`} style={{ maxHeight: menuHeight, overflow: 'hidden' }}>
               <ul id="menuList" className="font-medium flex flex-col space-y-5 p-4 px-4 mt-4 h-64 bg-slate-900 bg-opacity-10 backdrop-blur-xl border-gray-700">
                 {navItems.map((item, index) => (
                   <li key={index}>

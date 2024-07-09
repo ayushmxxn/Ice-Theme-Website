@@ -1,12 +1,38 @@
 'use client'
-import { useState, useRef, useEffect } from 'react';
-import { motion, useAnimation, useTransform, useScroll } from 'framer-motion';
-import Image from 'next/image';
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { FiArrowRight } from "react-icons/fi";
 import Ice from '../images/Ice theme Preview Main.png';
 import Blaze from '../images/blazepreview.png';
+import { useState, useRef, useEffect } from 'react';
+import { useAnimation, useTransform, useScroll } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from "framer-motion";
+import Image from "next/image";
+
+const COLORS_TOP = ["#13FFAA"];
 
 const Theme = () => {
+  const color = useMotionValue(COLORS_TOP[0]);
+
+  useEffect(() => {
+    animate(color, COLORS_TOP, {
+      ease: "easeInOut",
+      duration: 10,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  }, [color]);
+
+  const backgroundImage = useMotionTemplate`radial-gradient(circle at 50% 15%, #020617 50%, ${color})`;
+  const border = useMotionTemplate`1px solid ${color}`;
+  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -35,7 +61,7 @@ const Theme = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Check on initial render
+    handleResize(); 
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -46,21 +72,23 @@ const Theme = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowIce(prevShowIce => !prevShowIce);
-    }, 5000); // Change every 5 seconds
+    }, 5000); 
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+    return () => clearInterval(interval); 
+  }, [color]);
+
 
   return (
-    <div id='ThemeSection' className={`${isMobile ? "bg-gradient-to-b from-indigo-500 via-purple-300 to-indigo-500" : "bg-gradient-to-b from-indigo-500 via-purple-300 to-indigo-500"} py-12 sm:py-20`} ref={sectionRef}>
-      <motion.div
-        initial={{ opacity: 0, translateY: 10 }}
-        animate={controls}
-        transition={{ duration: 0.5 }}
-        className='text-[23px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-8'
-      >
-        Make Coding Cooler Than the Other Side of the Pillow.
-      </motion.div>
+    <motion.section
+      style={{
+        backgroundImage,
+      }}
+      id="ThemeSection"
+      className="relative grid  place-content-center overflow-hidden bg-gray-950 px-4  pt-16 pb-24 text-gray-200"
+    >
+      <div  className="text-[23px] md:text-4xl lg:px-80 sm:px-40 text-center font-bold text-white mb-8">
+      Make Coding Cooler Than the Other Side of the Pillow.
+      </div>
       <div className='flex justify-center'>
         <motion.div className='w-full max-w-4xl'
         initial={{opacity: 0}}
@@ -69,11 +97,13 @@ const Theme = () => {
      
         >
         
-          <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-2 rounded-xl mb-5' />
+          <Image src={showIce ? Ice : Blaze} alt={showIce ? 'Ice Theme Preview' : 'Blaze Theme Preview'} className='p-2 border border-slate-500 backdrop-blur-md bg-white/20 rounded-xl mb-5' />
         </motion.div>
+
+      
       </div>
-    </div>
+    </motion.section>
   );
-}
+};
 
 export default Theme;
