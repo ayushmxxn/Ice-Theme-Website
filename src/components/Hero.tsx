@@ -50,11 +50,11 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center">
         <Navbar/>
         <Image src={logo} alt='logo' className='w-32 mb-5 z-10'/>
-       <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-5xl font-semibold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+       <h1 className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-5xl font-semibold leading-tight text-transparent sm:text-6xl sm:leading-tight md:text-7xl md:leading-tight">
           Ice Theme
         </h1>
-        <p className="my-6 max-w-xl text-center text-lg font-medium leading-relaxed  md:text-lg md:leading-relaxed">
-         Ice Theme for Visual Studio Code. Embrace Serenity with Icy Tones
+        <p className="mt-2 mb-10  text-center text-lg font-medium leading-relaxed  md:text-xl  md:leading-relaxed">
+         Ice Theme for Visual Studio Code. <br /> Embrace Serenity with Icy Tones
         </p>
         <motion.button
         onClick={() => openExtensionPage()}
