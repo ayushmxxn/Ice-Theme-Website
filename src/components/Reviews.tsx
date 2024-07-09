@@ -36,7 +36,7 @@ const Review: React.FC<TestimonialProps> = ({ testimonials, mode = 'light' }) =>
     <div id='TestimonialSection' className={`${poppin.className}`}>
       <div className={`flex flex-col  items-center justify-center pt-5 bg-black`}>
         <div className='flex flex-col  gap-5 mb-8 mt-10'>
-          <span className='text-center text-4xl'>Read what people are saying</span>
+          <span className='text-center text-4xl text-white'>Read what people are saying</span>
           <div>
             <motion.div id='Rating Stars' className='flex justify-center items-center mt-2 mb-5'
               initial={{ opacity: 0 }}
